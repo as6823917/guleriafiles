@@ -1,6 +1,6 @@
 from typing import List
 from bot import Bot
-from helper.delete_messages import mass_delete_messages
+from LuciferMoringstar_Robot.DeleteMediaRobot.delete_messages import mass_delete_messages
 from presets import Presets
 
 async def get_messages(client: Bot, chat_id: int, min_message_id: int, max_message_id: int, filter_type_s: List[str]):
