@@ -13,10 +13,6 @@ from LuciferMoringstar_Robot.Channel import handle_user_status
 from Database import Database
 
 
-if bool(os.environ.get("ENV", False)):
-    from sample_config import Config
-else:
-    from config import Config
 
 
 from pyrogram.errors import UserNotParticipant
