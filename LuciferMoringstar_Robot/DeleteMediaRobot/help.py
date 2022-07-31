@@ -3,7 +3,7 @@ import time
 from pyrogram import Client, filters
 from presets import Presets
 
-@Client.on_message(filters.private & filters.command(['start', 'help']))
+@Client.on_message(filters.private & filters.command(['delstart', 'delhelp']))
 async def help_me(client, message):
     await client.send_message(
         chat_id=message.chat.id,
