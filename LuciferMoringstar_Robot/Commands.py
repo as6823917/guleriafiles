@@ -1,16 +1,29 @@
 import os
 import logging
 import asyncio
+import time
 from os import environ
 from pyrogram import Client, filters, idle
 from pyrogram import StopPropagation
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup , Message
 from Config import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, TUTORIAL, BROADCAST_CHANNEL, DB_URL, SESSION, ADMIN_ID,TIME, AUTH_GROUPS
 from LuciferMoringstar_Robot.Utils import Media, get_file_details 
 from LuciferMoringstar_Robot.Broadcast import broadcast
 from LuciferMoringstar_Robot import ABOUT
 from LuciferMoringstar_Robot.Channel import handle_user_status
 from Database import Database
+from bot import Bot
+from pyrogram.errors import FloodWait
+from LuciferMoringstar_Robot.DeleteMediaRobot.get_messages import get_messages
+from pyrogram.errors import ChatAdminRequired
+from presets import Presets
+
+if bool(os.environ.get("ENV", False)):
+    from sample_config import Config
+else:
+    from config import Config
+
+
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
 
@@ -337,7 +350,39 @@ async def bot_info(bot, message):
         ]
         ]
     await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
-
+    
+   
+@Bot.on_message(filters.group & filters.command('cleanmedia'))
+async def del_all_command_fn(client: Bot, message: Message):
+    await message.delete()
+    if message.from_user.id not in Config.AUTH_USERS:
+        return
+    try:
+        status_message = await client.send_message(
+            chat_id=message.chat.id,
+            text=Presets.DELETING_MESSAGE,
+            parse_mode='html',
+            disable_web_page_preview=True
+        )
+    except ChatAdminRequired:
+        status_message = None
+    try:
+        await get_messages(
+            client.USER,
+            message.chat.id,
+            0,
+            status_message.message_id if status_message else message.message_id,
+            []
+        )
+    except FloodWait as e:
+        time.sleep(e.x)
+    await client.edit_message_text(
+        chat_id=message.chat.id,
+        text=Presets.DELETED_MESSAGE,
+        message_id=status_message.message_id,
+        parse_mode='html',
+        disable_web_page_preview=True
+    )
 @Client.on_message(filters.chat(AUTH_GROUPS))
 async def deleter(user, message):
     try:
