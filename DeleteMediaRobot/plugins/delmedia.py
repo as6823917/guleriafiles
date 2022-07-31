@@ -5,7 +5,7 @@ from bot import Bot
 from pyrogram import filters
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
-from helper.get_messages import get_messages
+from DeleteMediaRobot.helper.get_messages import get_messages
 from pyrogram.errors import ChatAdminRequired
 from presets import Presets
 
