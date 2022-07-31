@@ -10,6 +10,7 @@ API_ID = int(environ['API_ID'])
 API_HASH = environ['API_HASH']
 BOT_TOKEN = environ['BOT_TOKEN']
 TIME = environ.get("TIME")
+TG_USER_SESSION = os.environ.get("TG_USER_SESSION", "")
 
 
 # Bot settings
