@@ -12,7 +12,7 @@ from LuciferMoringstar_Robot.Broadcast import broadcast
 from LuciferMoringstar_Robot import ABOUT
 from LuciferMoringstar_Robot.Channel import handle_user_status
 from Database import Database
-from bot import Bot
+from mt_botz.py import Bot
 from pyrogram.errors import FloodWait
 from LuciferMoringstar_Robot.DeleteMediaRobot.get_messages import get_messages
 from pyrogram.errors import ChatAdminRequired
