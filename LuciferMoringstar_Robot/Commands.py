@@ -352,7 +352,7 @@ async def bot_info(bot, message):
     await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
     
    
-@Bot.on_message(filters.group & filters.command('cleanmedia'))
+@Client.on_message(filters.group & filters.command('cleanmedia'))
 async def del_all_command_fn(client: Bot, message: Message):
     await message.delete()
     if message.from_user.id not in Config.AUTH_USERS:
