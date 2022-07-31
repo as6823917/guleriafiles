@@ -30,8 +30,8 @@ Bot Owner Only
 ABOUT = """
 ➥ Name :  Auto Filter V3
     
-➥ Creator : [Naughty PROFESSOR](
-https://youtube.com/c/NaughtyPROFESSOR)
+➥ Creator : [GULERIA ](
+https://t.me/guleriamovies)
 
 ➥ Language : Python3
 
