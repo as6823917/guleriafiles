@@ -5,6 +5,7 @@ API_ID = 12345
 API_HASH = '0123456789abcdef0123456789abcdef'
 BOT_TOKEN = '123456:LuciferMoringstar_Robot-zyx57W2v1u123ew11'
 USERBOT_STRING_SESSION = 'LuciferMoringstar_Robot'
+TG_USER_SESSION = 'Generate a user session string'
 
 # Bot settings
 CACHE_TIME = 300
