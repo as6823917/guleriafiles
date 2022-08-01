@@ -32,10 +32,10 @@ MAIN = """
 """
 
 PORN = """
-➥ Join Main Channel  [Click Me](https://t.me/hornhubbot)
+➥ Join This BOT [Click Me](https://t.me/hornhubbot)
 """
 MOVIES = """
-➥ Join Main Channel  [Click Me](https://t.me/guleriabot)
+➥ Join This BOT  [Click Me](https://t.me/guleriabot)
 """
 
 ABOUT = """
