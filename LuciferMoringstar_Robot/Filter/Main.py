@@ -81,7 +81,7 @@ async def filter(client, message):
             buttons.append(
                 [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
             )
-            poster=None
+            poster= https://te.legra.ph/file/497683af7868ac7fab7fd.jpg
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
@@ -100,7 +100,7 @@ async def filter(client, message):
         buttons.append(
             [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
         )
-        poster=None
+        poster= https://te.legra.ph/file/497683af7868ac7fab7fd.jpg
         if API_KEY:
             poster=await get_poster(search)
         if poster:
