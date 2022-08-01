@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 import re
 from pyrogram.errors import UserNotParticipant
 from LuciferMoringstar_Robot import get_filter_results, get_file_details, is_subscribed, get_poster
-from LuciferMoringstar_Robot import RATING, GENRES, HELP, ABOUT
+from LuciferMoringstar_Robot import RATING, GENRES, HELP, ABOUT, MAIN, MOVIES, PORN
 import random
 BUTTONS = {}
 BOT = {}
@@ -281,6 +281,28 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]
                 ]
             await query.message.edit(text=f"{HELP}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+
+        elif query.data == "porn":
+            buttons = [
+                [
+                    InlineKeyboardButton('Making Video', url=f'{TUTORIAL}')
+                ]
+                ]
+            await query.message.edit(text=f"{PORN}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+        elif query.data == "newmovies":
+            buttons = [
+                [
+                    InlineKeyboardButton('Making Video', url=f'{TUTORIAL}')
+                ]
+                ]
+            await query.message.edit(text=f"{MOVIES}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+        elif query.data == "main":
+            buttons = [
+                [
+                    InlineKeyboardButton('Making Video', url=f'{TUTORIAL}')
+                ]
+                ]
+            await query.message.edit(text=f"{MAIN}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
         elif query.data == "about":
             buttons = [
