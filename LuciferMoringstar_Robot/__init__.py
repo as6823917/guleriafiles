@@ -27,6 +27,17 @@ Bot Owner Only
 
 """
 
+MAIN = """
+➥ Join Main Channel
+"""
+
+PORN = """
+➥ Join Main Channel
+"""
+MOVIES = """
+➥ Join Main Channel
+"""
+
 ABOUT = """
 ➥ Name :  Auto Filter V3
     
