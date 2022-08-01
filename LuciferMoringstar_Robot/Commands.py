@@ -121,6 +121,11 @@ async def start(bot, message):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[
+                InlineKeyboardButton("Join Main Channel", callback_data="main")
+                ],[
+                InlineKeyboardButton("Porn", callback_data="porn"),
+                InlineKeyboardButton("New Movies", callback_data="newmovies")
+                ],[
                 InlineKeyboardButton("Search Here", switch_inline_query_current_chat='')
                 ],[
                 InlineKeyboardButton("Help", callback_data="help"),
