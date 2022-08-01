@@ -28,25 +28,21 @@ Bot Owner Only
 """
 
 MAIN = """
-➥ Join Main Channel
+➥ Join Main Channel [Click Me](https://t.me/+BSzJAUCQshw1N2Nl)
 """
 
 PORN = """
-➥ Join Main Channel
+➥ Join Main Channel  [Click Me](https://t.me/hornhubbot)
 """
 MOVIES = """
-➥ Join Main Channel
+➥ Join Main Channel  [Click Me](https://t.me/guleriabot)
 """
 
 ABOUT = """
-➥ Name :  Auto Filter V3
+➥ Name :  GULERIA
     
-➥ Creator : [GULERIA ](
+➥ Creator : [GULERIA](
 https://t.me/guleriamovies)
-
-➥ Language : Python3
-
-➥ Library : Pyrogram Asyncio 1.13.0
 
 ➥ Tutorial : [Click Me](https://t.me/guleriamovies)
 """
