@@ -17,8 +17,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/DalinMathew/AutoFilterBotV3",
-    "repository": "https://github.com/DalinMathew/AutoFilterBotV3",
+    "website": "https://github.com/as6823917/guleriafiles",
+    "repository": "https://github.com/as6823917/guleriafiles",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
