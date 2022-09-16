@@ -113,9 +113,6 @@
             "value": "",
             "required": true
         },
-        "TG_USER_SESSION": {
-            "description": "String Session from an admin user. Go to: t.ly/GxsB ",
-            "required": true},
         
         "BROADCAST_CHANNEL": {
             "description": "ID of a Channel (user Notification)",
